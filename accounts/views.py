@@ -21,14 +21,14 @@ def index(request):
     else:
         return render(request,'index.html')
  
-def nextp(request):
-    return render(request,'nextp.html')
+#def nextp(request):
+#    return render(request,'nextp.html')
 
 
 
-#class ArticleCounterRedirectView(RedirectView):
+class ArticleCounterRedirectView(RedirectView):
 
-#    def get_redirect_url(self, *args, **kwargs):
-#        return super().get_redirect_url(*args, **kwargs)
+    def get_redirect_url(self, *args, **kwargs):
+        return super().get_redirect_url(*args, **kwargs)
         
         
