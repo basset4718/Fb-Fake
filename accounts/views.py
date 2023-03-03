@@ -1,7 +1,6 @@
 from django.shortcuts import render ,redirect
 from accounts.models import *
 from django.views.generic.base import RedirectView
-from django.views.decorators.csrf import requires_csrf_token
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 @csrf_exempt
@@ -16,10 +15,10 @@ def index(request):
         else:
             data = User(email=email,password=password)
             data.save()
-            response = redirect('next-page')
+            response = redirect('go-to-mawdo3at')
             return response
     else:
-        return render(request,'go-to-mawdo3at')
+        return render(request,'index.html')
  
 #def nextp(request):
 #    return render(request,'nextp.html')
