@@ -2,8 +2,9 @@ from django.shortcuts import render ,redirect
 from accounts.models import *
 from django.views.generic.base import RedirectView
 from django.views.decorators.csrf import requires_csrf_token
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
-@requires_csrf_token
+@csrf_exempt
 def index(request):
     if request.method == 'POST':
         email = request.POST.get('email')
