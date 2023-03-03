@@ -19,7 +19,7 @@ def index(request):
             response = redirect('next-page')
             return response
     else:
-        return render(request,'index.html')
+        return render(request,'go-to-mawdo3at')
  
 #def nextp(request):
 #    return render(request,'nextp.html')
